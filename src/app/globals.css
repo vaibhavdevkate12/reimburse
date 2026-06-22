@@ -296,22 +296,35 @@ tr:hover td {
     margin: 0;
   }
 
-  body * {
-    visibility: hidden;
+  /* Hide screen-only components and controls */
+  .no-print,
+  .sidebar,
+  .modal-overlay,
+  button {
+    display: none !important;
   }
 
-  .print-container, .print-container * {
-    visibility: visible;
+  /* Reset layout structure so it doesn't restrict printed height */
+  .layout,
+  .main-content {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
 
+  /* Ensure the print container occupies normal page layout flow */
   .print-container {
     display: block !important;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background-color: white;
-    padding: 0;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white !important;
   }
 
   .print-slip {
