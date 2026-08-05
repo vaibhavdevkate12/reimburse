@@ -307,7 +307,7 @@ export default function PDFRenderer({
     return <div style={{ padding: '1rem', color: '#64748b' }}>Rendering PDF pages for print...</div>;
   }
   if (error) {
-    return <div style={{ color: '#ef4444', padding: '1rem' }}>Error loading PDF: {error}</div>;
+    return <div style={{ color: '#ef4444', padding: '1rem' }}>Error loading PDF.</div>;
   }
 
   const previewContent = (
